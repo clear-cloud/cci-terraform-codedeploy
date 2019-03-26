@@ -2,7 +2,7 @@
 # CodeDeploy Role
 # ----------------
 resource "aws_iam_role" "role" {
-  name = "${var.environment}_bastion_role"
+  name = "${var.environment}_${var.name}_codeploy_role"
 
   assume_role_policy = <<EOF
 {
