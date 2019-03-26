@@ -1,3 +1,4 @@
+variable "orchestration" {}
 variable "environment" {}
 variable "deployment_config_name" {
   default = "CodeDeployDefault.OneAtATime"
