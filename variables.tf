@@ -12,3 +12,8 @@ variable "compute_platform" {
 }
 
 variable "name" {}
+
+variable "lifecycle_rule_enabled" {
+  description = "enable / disable default lifecycle rule"
+  default     = "true"
+}
