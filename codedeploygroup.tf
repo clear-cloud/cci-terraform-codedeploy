@@ -17,13 +17,14 @@ resource "aws_codedeploy_deployment_group" "group" {
       action_on_timeout    = "${var.action_on_timeout}"
       wait_time_in_minutes = "${var.wait_time_in_minutes}"
     }
-  }
+  
 
-  green_fleet_provisioning_option {
-    action = "${var.green_fleet_provisioning_option_action}"
-  }
+    green_fleet_provisioning_option {
+      action = "${var.green_fleet_provisioning_option_action}"
+    }
 
-  terminate_blue_instances_on_deployment_success {
-    action = "${var.terminate_blue_instances_on_deployment_success_action}"
+    terminate_blue_instances_on_deployment_success {
+      action = "${var.terminate_blue_instances_on_deployment_success_action}"
+    } 
   }
 }
