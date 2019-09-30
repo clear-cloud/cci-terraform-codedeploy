@@ -35,7 +35,7 @@ variable "action_on_timeout" {
 
 variable "wait_time_in_minutes" {
   description = "Wait time in minutes to wait more changuing the status of the deployment"
-  default     = "15"
+  default     = ""
 }
 
 variable "green_fleet_provisioning_option_action" {
