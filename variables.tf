@@ -47,3 +47,8 @@ variable "terminate_blue_instances_on_deployment_success_action" {
   description = "The action to take on instances in the original environment after a successful blue/green deployment."
   default     = "TERMINATE"
 }
+
+variable "listener_name" {
+  description = "Listener name"
+  default     = ""
+}

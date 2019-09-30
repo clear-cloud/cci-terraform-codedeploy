@@ -17,7 +17,6 @@ resource "aws_codedeploy_deployment_group" "example" {
       action_on_timeout    = "${var.action_on_timeout}"
       wait_time_in_minutes = "${var.wait_time_in_minutes}"
     }
-  
 
     green_fleet_provisioning_option {
       action = "${var.green_fleet_provisioning_option_action}"
@@ -25,6 +24,12 @@ resource "aws_codedeploy_deployment_group" "example" {
 
     terminate_blue_instances_on_deployment_success {
       action = "${var.terminate_blue_instances_on_deployment_success_action}"
-    } 
+    }
+  }
+
+  load_balancer_info {
+    target_group_info {
+      name = "${var.listener_arns}"
+    }
   }
 }
