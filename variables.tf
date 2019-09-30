@@ -47,3 +47,8 @@ variable "listener_name" {
   description = "Listener name"
   default     = ""
 }
+
+variable "deployment_config_name" {
+  description = "Deployment config Name"
+  default     = "CodeDeployDefault.AllAtOnce"
+}
