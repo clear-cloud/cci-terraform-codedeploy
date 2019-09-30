@@ -32,4 +32,9 @@ resource "aws_codedeploy_deployment_group" "example" {
       name = "${var.listener_name}"
     }
   }
+
+  auto_rollback_configuration {
+    enabled = true
+    events  = ["DEPLOYMENT_FAILURE"]
+  }
 }
