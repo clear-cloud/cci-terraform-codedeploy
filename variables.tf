@@ -30,7 +30,7 @@ variable "deployment_type" {
 
 variable "action_on_timeout" {
   description = "When to reroute traffic from an original environment to a replacement environment in a blue/green deployment"
-  default     = "STOP_DEPLOYMENT"
+  default     = "CONTINUE_DEPLOYMENT"
 }
 
 variable "wait_time_in_minutes" {
