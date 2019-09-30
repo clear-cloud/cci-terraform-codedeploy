@@ -14,8 +14,7 @@ resource "aws_codedeploy_deployment_group" "example" {
 
   blue_green_deployment_config {
     deployment_ready_option {
-      action_on_timeout    = "${var.action_on_timeout}"
-      wait_time_in_minutes = "${var.wait_time_in_minutes}"
+      action_on_timeout = "${var.action_on_timeout}"
     }
 
     green_fleet_provisioning_option {

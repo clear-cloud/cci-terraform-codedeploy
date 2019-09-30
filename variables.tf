@@ -33,11 +33,6 @@ variable "action_on_timeout" {
   default     = "CONTINUE_DEPLOYMENT"
 }
 
-variable "wait_time_in_minutes" {
-  description = "Wait time in minutes to wait more changuing the status of the deployment"
-  default     = ""
-}
-
 variable "green_fleet_provisioning_option_action" {
   description = "The method used to add instances to a replacement environment"
   default     = "COPY_AUTO_SCALING_GROUP"
