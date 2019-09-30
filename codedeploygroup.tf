@@ -12,9 +12,11 @@ resource "aws_codedeploy_deployment_group" "group" {
     deployment_type   = "${var.deployment_type}"
   }
 
-  deployment_ready_option {
-    action_on_timeout    = "${var.action_on_timeout}"
-    wait_time_in_minutes = "${var.wait_time_in_minutes}"
+  blue_green_deployment_config {
+    deployment_ready_option {
+      action_on_timeout    = "${var.action_on_timeout}"
+      wait_time_in_minutes = "${var.wait_time_in_minutes}"
+    }
   }
 
   green_fleet_provisioning_option {
