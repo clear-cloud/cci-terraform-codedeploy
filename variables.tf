@@ -23,7 +23,7 @@ variable "deployment_option" {
   default     = "WITH_TRAFFIC_CONTROL"
 }
 
-deployment_type {
+variable "deployment_type" {
   description = "Indicates whether to run an in-place deployment or a blue/green deployment."
   default     = "IN_PLACE"
 }
