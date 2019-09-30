@@ -29,7 +29,7 @@ resource "aws_codedeploy_deployment_group" "example" {
 
   load_balancer_info {
     target_group_info {
-      name = "${var.listener_arns}"
+      name = "${var.listener_name}"
     }
   }
 }
