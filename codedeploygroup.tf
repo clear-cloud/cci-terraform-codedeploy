@@ -39,10 +39,8 @@ resource "aws_codedeploy_deployment_group" "example" {
   }
 
   lifecycle {
-    ignore_changes = [
-      # Ignore changes to autoscaling_groups as these will change
-      # due to Blue-Green deployment
-      autoscaling_groups,
-    ]
+    # Ignore changes to autoscaling_groups as these will change
+    # due to Blue-Green deployment
+    ignore_changes = ["autoscaling_groups"]
   }
 }
